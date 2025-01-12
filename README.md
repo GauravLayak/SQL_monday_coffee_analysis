@@ -232,12 +232,12 @@ growth_ratio AS (
 			LAG(total_sales, 1) OVER(PARTITION BY city_name ORDER BY year, month) AS last_month_sale
 		FROM monthly_sales ) 
 SELECT city_name,
-		month,
-		year,
-		last_month_sale,
-		current_month_sale,
-		ROUND(
-			(current_month_sale - last_month_sale)::numeric/last_month_sale::numeric * 100, 2) AS growth_ratio
+       month,
+       year,
+       last_month_sale,
+       current_month_sale,
+       ROUND(
+             (current_month_sale - last_month_sale)::numeric/last_month_sale::numeric * 100, 2) AS growth_ratio
 FROM growth_ratio
 WHERE last_month_sale IS NOT NULL;
 ```
