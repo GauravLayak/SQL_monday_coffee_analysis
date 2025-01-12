@@ -58,7 +58,7 @@ SELECT COUNT(*) FROM products;
 ```
 ### Data Analysis & Findings :
 ## Key Questions
-1. ** How many people in each city are estimated to consume coffee, given that 25% of the population does?**  
+1. **How many people in each city are estimated to consume coffee, given that 25% of the population does?**  
   ```sql
 SELECT city_name,
 	ROUND((population * 0.25)/1000000,2) AS coffee_consumers_per_million,
@@ -67,7 +67,7 @@ FROM city
 ORDER BY 2 DESC;
 ```
 
-2. ** What is the total revenue generated from coffee sales across all cities in the last quarter of 2023?**  
+2. **What is the total revenue generated from coffee sales across all cities in the last quarter of 2023?**  
   ```sql
 SELECT ci.city_name,
 	SUM(total) AS total_revenue
