@@ -42,7 +42,7 @@ CREATE TABLE sales (
 sale_id	INT PRIMARY KEY,
 sale_date DATE,
 product_id INT,
-customer_id	INT,
+customer_id INT,
 total FLOAT,
 rating INT,
 CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products(product_id),
