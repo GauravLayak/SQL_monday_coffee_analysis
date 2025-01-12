@@ -12,7 +12,7 @@ The goal of this project is to analyze the sales data of Monday Coffee, a compan
   1. **city table**:
  ```sql
 CREATE TABLE city (
-	city_id	INT PRIMARY KEY,
+	city_id INT PRIMARY KEY,
 	city_name VARCHAR(10),
 	population BIGINT,
 	estimated_rent FLOAT,
@@ -30,7 +30,7 @@ CREATE TABLE products (
  3. **customers table**:
  ```sql
 CREATE TABLE customers (
-	customer_id	INT PRIMARY KEY,
+	customer_id INT PRIMARY KEY,
 	customer_name VARCHAR(20),
 	city_id INT,
 	CONSTRAINT fk_city FOREIGN KEY (city_id) REFERENCES city(city_id)
